@@ -15,11 +15,9 @@ void Servo::begin(int pin, float min_pulse_ms, float max_pulse_ms){
     TCCR1A |= (1 << WGM11);
     TCCR1B |= (1 << WGM13) | (1 << WGM12);
 
-    // Prescaler de 8 bits
-    TCCR1B |= (1 << CS11);
+    TCCR1B |= (1 << CS11);// Prescaler de 8 bits
 
-    // Periodo 20 ms
-    ICR1 = 39999;
+    ICR1 = 39999;// Periodo 20 ms
 
     if (pin == 9) {
         DDRB |= (1 << PB1);        // Pin 9
