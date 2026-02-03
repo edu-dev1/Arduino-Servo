@@ -13,6 +13,7 @@ Servomotor
 int PWM_pin = 9;
 float min_pulse_ms = .5, max_pulse_ms = 2.4;
 Servo my_servo;
+
 /*--Degrees--*/
 int degrees[] = {0, 90, 180};
 
